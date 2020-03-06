@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="fix8_dependencies_poco_init_targets_0;fix8_dependencies_poco_init_targets_1;fix8_dependencies_poco_init_targets_2;fix8_dependencies_poco_ItemGroupInit_targets_3">
+  <PropertyGroup Label="Default initializers for properties">
+    <Linkages-fix8_dependencies_poco Condition="'$(Linkages-fix8_dependencies_poco)' == ''">dynamic</Linkages-fix8_dependencies_poco>
+    <CallingConventions-fix8_dependencies_poco Condition="'$(CallingConventions-fix8_dependencies_poco)' == ''">cdecl</CallingConventions-fix8_dependencies_poco>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>FIX8_NUGET_HAS_POCO;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)../../build/native/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)../../build/native/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v140 and Release and Desktop" Condition="'$(Platform.ToLower())' == 'win32' And ( '$(PlatformToolset.ToLower())' == 'v140' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8' ) And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v140/Release/Desktop/PocoXML.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v140/Release/Desktop/PocoUtil.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v140/Release/Desktop/PocoNetSSL.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v140/Release/Desktop/PocoNet.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v140/Release/Desktop/PocoJSON.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v140/Release/Desktop/PocoFoundation.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v140/Release/Desktop/PocoCrypto.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v120 and Release and Desktop" Condition="'$(Platform.ToLower())' == 'x64' And ( '$(PlatformToolset.ToLower())' == 'v120' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0' ) And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../../build/native/lib/x64/v120/Release/Desktop/PocoXML.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v120/Release/Desktop/PocoUtil.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v120/Release/Desktop/PocoNetSSL.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v120/Release/Desktop/PocoNet.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v120/Release/Desktop/PocoJSON.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v120/Release/Desktop/PocoFoundation.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v120/Release/Desktop/PocoCrypto.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v140 and Release and Desktop" Condition="'$(Platform.ToLower())' == 'x64' And ( '$(PlatformToolset.ToLower())' == 'v140' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8' ) And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../../build/native/lib/x64/v140/Release/Desktop/PocoXML.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v140/Release/Desktop/PocoUtil.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v140/Release/Desktop/PocoNetSSL.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v140/Release/Desktop/PocoNet.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v140/Release/Desktop/PocoJSON.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v140/Release/Desktop/PocoFoundation.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v140/Release/Desktop/PocoCrypto.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v140 and Debug and Desktop" Condition="'$(Platform.ToLower())' == 'x64' And ( '$(PlatformToolset.ToLower())' == 'v140' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8' ) And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../../build/native/lib/x64/v140/Debug/Desktop/PocoXMLd.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v140/Debug/Desktop/PocoUtild.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v140/Debug/Desktop/PocoNetSSLd.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v140/Debug/Desktop/PocoNetd.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v140/Debug/Desktop/PocoJSONd.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v140/Debug/Desktop/PocoFoundationd.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v140/Debug/Desktop/PocoCryptod.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v120 and Debug and Desktop" Condition="'$(Platform.ToLower())' == 'win32' And ( '$(PlatformToolset.ToLower())' == 'v120' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0' ) And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v120/Debug/Desktop/PocoXMLd.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v120/Debug/Desktop/PocoUtild.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v120/Debug/Desktop/PocoNetSSLd.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v120/Debug/Desktop/PocoNetd.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v120/Debug/Desktop/PocoJSONd.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v120/Debug/Desktop/PocoFoundationd.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v120/Debug/Desktop/PocoCryptod.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v140 and Debug and Desktop" Condition="'$(Platform.ToLower())' == 'win32' And ( '$(PlatformToolset.ToLower())' == 'v140' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8' ) And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v140/Debug/Desktop/PocoXMLd.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v140/Debug/Desktop/PocoUtild.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v140/Debug/Desktop/PocoNetSSLd.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v140/Debug/Desktop/PocoNetd.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v140/Debug/Desktop/PocoJSONd.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v140/Debug/Desktop/PocoFoundationd.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v140/Debug/Desktop/PocoCryptod.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v120 and Release and Desktop" Condition="'$(Platform.ToLower())' == 'win32' And ( '$(PlatformToolset.ToLower())' == 'v120' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0' ) And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v120/Release/Desktop/PocoXML.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v120/Release/Desktop/PocoUtil.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v120/Release/Desktop/PocoNetSSL.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v120/Release/Desktop/PocoNet.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v120/Release/Desktop/PocoJSON.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v120/Release/Desktop/PocoFoundation.lib;$(MSBuildThisFileDirectory)../../build/native/lib/Win32/v120/Release/Desktop/PocoCrypto.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v120 and Debug and Desktop" Condition="'$(Platform.ToLower())' == 'x64' And ( '$(PlatformToolset.ToLower())' == 'v120' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0' ) And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../../build/native/lib/x64/v120/Debug/Desktop/PocoXMLd.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v120/Debug/Desktop/PocoUtild.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v120/Debug/Desktop/PocoNetSSLd.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v120/Debug/Desktop/PocoNetd.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v120/Debug/Desktop/PocoJSONd.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v120/Debug/Desktop/PocoFoundationd.lib;$(MSBuildThisFileDirectory)../../build/native/lib/x64/v120/Debug/Desktop/PocoCryptod.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Target Name="fix8_dependencies_poco_AfterBuild" AfterTargets="AfterBuild">
+    <Copy SkipUnchangedFiles="true" SourceFiles="@(CopyToOutput)" UseHardlinksIfPossible="true" DestinationFolder="$(TargetDir)">
+      <Output TaskParameter="DestinationFiles" PropertyName="DestinationFiles" />
+      <Output TaskParameter="DestinationFiles" ItemName="DestinationFiles" />
+      <Output TaskParameter="CopiedFiles" PropertyName="CopiedFiles" />
+      <Output TaskParameter="CopiedFiles" ItemName="CopiedFiles" />
+    </Copy>
+  </Target>
+  <Target Name="fix8_dependencies_poco_BeforeLink" AfterTargets="BeforeLink">
+    <CheckRuntimeLibrary RuntimeLibrary="%(ClCompile.RuntimeLibrary)" ExpectedRuntimeLibrary="none" LibraryName="fix8_dependencies_poco" />
+  </Target>
+  <Target Name="fix8_dependencies_poco_init_targets_1">
+    <StringContains Text="Linkages-dynamic" Library="fix8_dependencies_poco" Value="dynamic" Condition="'$(Linkages-fix8_dependencies_poco)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkages-fix8_dependencies_poco" />
+    </StringContains>
+    <StringContains Text="Linkages-static" Library="fix8_dependencies_poco" Value="static" Condition="'$(Linkages-fix8_dependencies_poco)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkages-fix8_dependencies_poco" />
+    </StringContains>
+    <StringContains Text="Linkages-ltcg" Library="fix8_dependencies_poco" Value="ltcg" Condition="'$(Linkages-fix8_dependencies_poco)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkages-fix8_dependencies_poco" />
+    </StringContains>
+    <StringContains Text="Linkages-sxs" Library="fix8_dependencies_poco" Value="sxs" Condition="'$(Linkages-fix8_dependencies_poco)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkages-fix8_dependencies_poco" />
+    </StringContains>
+    <StringContains Text="CallingConventions-cdecl" Library="fix8_dependencies_poco" Value="cdecl" Condition="'$(CallingConventions-fix8_dependencies_poco)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConventions-fix8_dependencies_poco" />
+    </StringContains>
+    <StringContains Text="CallingConventions-stdcall" Library="fix8_dependencies_poco" Value="stdcall" Condition="'$(CallingConventions-fix8_dependencies_poco)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConventions-fix8_dependencies_poco" />
+    </StringContains>
+    <StringContains Text="CallingConventions-fastcall" Library="fix8_dependencies_poco" Value="fastcall" Condition="'$(CallingConventions-fix8_dependencies_poco)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConventions-fix8_dependencies_poco" />
+    </StringContains>
+    <StringContains Text="CallingConventions-thiscall" Library="fix8_dependencies_poco" Value="thiscall" Condition="'$(CallingConventions-fix8_dependencies_poco)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConventions-fix8_dependencies_poco" />
+    </StringContains>
+    <StringContains Text="CallingConventions-clrcall" Library="fix8_dependencies_poco" Value="clrcall" Condition="'$(CallingConventions-fix8_dependencies_poco)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConventions-fix8_dependencies_poco" />
+    </StringContains>
+    <StringContains Text="CallingConventions-vectorcall" Library="fix8_dependencies_poco" Value="vectorcall" Condition="'$(CallingConventions-fix8_dependencies_poco)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConventions-fix8_dependencies_poco" />
+    </StringContains>
+  </Target>
+  <Target Name="fix8_dependencies_poco_init_targets_2">
+    <SetEnv Condition="'$(Platform.ToLower())' == 'win32' And ( '$(PlatformToolset.ToLower())' == 'v140' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8' ) And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Release/Desktop">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(Platform.ToLower())' == 'x64' And ( '$(PlatformToolset.ToLower())' == 'v120' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0' ) And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Release/Desktop">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(Platform.ToLower())' == 'x64' And ( '$(PlatformToolset.ToLower())' == 'v140' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8' ) And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Release/Desktop">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(Platform.ToLower())' == 'x64' And ( '$(PlatformToolset.ToLower())' == 'v140' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8' ) And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(Platform.ToLower())' == 'win32' And ( '$(PlatformToolset.ToLower())' == 'v120' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0' ) And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(Platform.ToLower())' == 'win32' And ( '$(PlatformToolset.ToLower())' == 'v140' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8' ) And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(Platform.ToLower())' == 'win32' And ( '$(PlatformToolset.ToLower())' == 'v120' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0' ) And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Release/Desktop">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(Platform.ToLower())' == 'x64' And ( '$(PlatformToolset.ToLower())' == 'v120' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0' ) And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+  </Target>
+  <Target Name="fix8_dependencies_poco_ItemGroupInit_targets_3">
+    <ItemGroup Label="Win32 and v140 and Release and Desktop" Condition="'$(Platform.ToLower())' == 'win32' And ( '$(PlatformToolset.ToLower())' == 'v140' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8' ) And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )">
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Release/Desktop/PocoCrypto.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Release/Desktop/PocoFoundation.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Release/Desktop/PocoJSON.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Release/Desktop/PocoNet.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Release/Desktop/PocoNetSSL.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Release/Desktop/PocoUtil.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Release/Desktop/PocoXML.dll" />
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Release/Desktop/PocoCrypto.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Release/Desktop/PocoFoundation.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Release/Desktop/PocoJSON.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Release/Desktop/PocoNet.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Release/Desktop/PocoNetSSL.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Release/Desktop/PocoUtil.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Release/Desktop/PocoXML.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+    </ItemGroup>
+    <ItemGroup Label="x64 and v120 and Release and Desktop" Condition="'$(Platform.ToLower())' == 'x64' And ( '$(PlatformToolset.ToLower())' == 'v120' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0' ) And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )">
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Release/Desktop/PocoCrypto64.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Release/Desktop/PocoFoundation64.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Release/Desktop/PocoJSON64.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Release/Desktop/PocoNet64.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Release/Desktop/PocoNetSSL64.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Release/Desktop/PocoUtil64.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Release/Desktop/PocoXML64.dll" />
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Release/Desktop/PocoCrypto64.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Release/Desktop/PocoFoundation64.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Release/Desktop/PocoJSON64.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Release/Desktop/PocoNet64.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Release/Desktop/PocoNetSSL64.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Release/Desktop/PocoUtil64.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Release/Desktop/PocoXML64.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+    </ItemGroup>
+    <ItemGroup Label="x64 and v140 and Release and Desktop" Condition="'$(Platform.ToLower())' == 'x64' And ( '$(PlatformToolset.ToLower())' == 'v140' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8' ) And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )">
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Release/Desktop/PocoCrypto64.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Release/Desktop/PocoFoundation64.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Release/Desktop/PocoJSON64.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Release/Desktop/PocoNet64.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Release/Desktop/PocoNetSSL64.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Release/Desktop/PocoUtil64.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Release/Desktop/PocoXML64.dll" />
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Release/Desktop/PocoCrypto64.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Release/Desktop/PocoFoundation64.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Release/Desktop/PocoJSON64.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Release/Desktop/PocoNet64.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Release/Desktop/PocoNetSSL64.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Release/Desktop/PocoUtil64.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Release/Desktop/PocoXML64.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+    </ItemGroup>
+    <ItemGroup Label="x64 and v140 and Debug and Desktop" Condition="'$(Platform.ToLower())' == 'x64' And ( '$(PlatformToolset.ToLower())' == 'v140' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8' ) And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )">
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop/PocoCrypto64d.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop/PocoCrypto64d.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop/PocoFoundation64d.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop/PocoFoundation64d.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop/PocoJSON64d.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop/PocoJSON64d.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop/PocoNet64d.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop/PocoNet64d.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop/PocoNetSSL64d.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop/PocoNetSSL64d.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop/PocoUtil64d.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop/PocoUtil64d.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop/PocoXML64d.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop/PocoXML64d.pdb" />
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop/PocoCrypto64d.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop/PocoFoundation64d.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop/PocoJSON64d.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop/PocoNet64d.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop/PocoNetSSL64d.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop/PocoUtil64d.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v140/Debug/Desktop/PocoXML64d.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+    </ItemGroup>
+    <ItemGroup Label="Win32 and v120 and Debug and Desktop" Condition="'$(Platform.ToLower())' == 'win32' And ( '$(PlatformToolset.ToLower())' == 'v120' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0' ) And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )">
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop/PocoCryptod.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop/PocoCryptod.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop/PocoFoundationd.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop/PocoFoundationd.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop/PocoJSONd.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop/PocoJSONd.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop/PocoNetd.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop/PocoNetd.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop/PocoNetSSLd.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop/PocoNetSSLd.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop/PocoUtild.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop/PocoUtild.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop/PocoXMLd.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop/PocoXMLd.pdb" />
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop/PocoCryptod.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop/PocoFoundationd.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop/PocoJSONd.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop/PocoNetd.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop/PocoNetSSLd.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop/PocoUtild.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Debug/Desktop/PocoXMLd.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+    </ItemGroup>
+    <ItemGroup Label="Win32 and v140 and Debug and Desktop" Condition="'$(Platform.ToLower())' == 'win32' And ( '$(PlatformToolset.ToLower())' == 'v140' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8' ) And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )">
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop/PocoCryptod.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop/PocoCryptod.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop/PocoFoundationd.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop/PocoFoundationd.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop/PocoJSONd.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop/PocoJSONd.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop/PocoNetd.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop/PocoNetd.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop/PocoNetSSLd.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop/PocoNetSSLd.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop/PocoUtild.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop/PocoUtild.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop/PocoXMLd.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop/PocoXMLd.pdb" />
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop/PocoCryptod.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop/PocoFoundationd.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop/PocoJSONd.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop/PocoNetd.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop/PocoNetSSLd.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop/PocoUtild.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v140/Debug/Desktop/PocoXMLd.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+    </ItemGroup>
+    <ItemGroup Label="Win32 and v120 and Release and Desktop" Condition="'$(Platform.ToLower())' == 'win32' And ( '$(PlatformToolset.ToLower())' == 'v120' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0' ) And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )">
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Release/Desktop/PocoCrypto.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Release/Desktop/PocoFoundation.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Release/Desktop/PocoJSON.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Release/Desktop/PocoNet.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Release/Desktop/PocoNetSSL.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Release/Desktop/PocoUtil.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Release/Desktop/PocoXML.dll" />
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Release/Desktop/PocoCrypto.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Release/Desktop/PocoFoundation.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Release/Desktop/PocoJSON.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Release/Desktop/PocoNet.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Release/Desktop/PocoNetSSL.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Release/Desktop/PocoUtil.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/Win32/v120/Release/Desktop/PocoXML.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+    </ItemGroup>
+    <ItemGroup Label="x64 and v120 and Debug and Desktop" Condition="'$(Platform.ToLower())' == 'x64' And ( '$(PlatformToolset.ToLower())' == 'v120' Or '$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0' Or '$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0' Or '$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0' ) And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And ( !('$(PlatformToolset.ToLower())' == 'windowskernelmodedriver8.0') And !('$(PlatformToolset.ToLower())' == 'windowsapplicationfordrivers8.0') And !('$(PlatformToolset.ToLower())' == 'windowsusermodedriver8.0') And !('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' &gt;= '8.0') And !('$(AppContainerApplication.ToLower())' == 'true') )">
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop/PocoCrypto64d.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop/PocoCrypto64d.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop/PocoFoundation64d.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop/PocoFoundation64d.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop/PocoJSON64d.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop/PocoJSON64d.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop/PocoNet64d.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop/PocoNet64d.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop/PocoNetSSL64d.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop/PocoNetSSL64d.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop/PocoUtil64d.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop/PocoUtil64d.pdb" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop/PocoXML64d.dll" />
+      <CopyToOutput Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop/PocoXML64d.pdb" />
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop/PocoCrypto64d.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop/PocoFoundation64d.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop/PocoJSON64d.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop/PocoNet64d.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop/PocoNetSSL64d.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop/PocoUtil64d.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+      <None Include="$(MSBuildThisFileDirectory)../../build/native/bin/x64/v120/Debug/Desktop/PocoXML64d.dll">
+        <DeploymentContent>true</DeploymentContent>
+      </None>
+    </ItemGroup>
+  </Target>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\default-propertiesui.xml" />
+  </ItemGroup>
+  <UsingTask TaskName="NuGetPackageOverlay" AssemblyFile="$(NuGet-NativeExtensionPath)\coapp.NuGetNativeMSBuildTasks.dll" Condition="'$(DesignTimeBuild)' != 'true' AND ('$(NugetMsBuildExtensionLoaded)' == '' OR '$(NugetMsBuildExtensionLoaded)' == 'false')" />
+  <UsingTask TaskName="CheckRuntimeLibrary" AssemblyFile="$(NuGet-NativeExtensionPath)\coapp.NuGetNativeMSBuildTasks.dll" Condition="'$(DesignTimeBuild)' != 'true' AND ('$(NugetMsBuildExtensionLoaded)' == '' OR '$(NugetMsBuildExtensionLoaded)' == 'false')" />
+  <UsingTask TaskName="StringContains" AssemblyFile="$(NuGet-NativeExtensionPath)\coapp.NuGetNativeMSBuildTasks.dll" Condition="'$(DesignTimeBuild)' != 'true' AND ('$(NugetMsBuildExtensionLoaded)' == '' OR '$(NugetMsBuildExtensionLoaded)' == 'false')" />
+  <Target Name="fix8_dependencies_poco_init_targets_0">
+    <Copy SkipUnchangedFiles="true" SourceFiles="$(NuGet-NativeExtensionPath)\coapp.NuGetNativeMSBuildTasks.dll.orig" DestinationFiles="$(NuGet-NativeExtensionPath)\coapp.NuGetNativeMSBuildTasks.dll" />
+    <PropertyGroup>
+      <NugetMsBuildExtensionLoaded Condition="'$(NugetMsBuildExtensionLoaded)' == '' OR '$(NuGet-OverlayLoaded)' == 'false'">true</NugetMsBuildExtensionLoaded>
+    </PropertyGroup>
+  </Target>
+</Project>
